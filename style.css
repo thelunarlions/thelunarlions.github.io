@@ -49,10 +49,14 @@
   border: 1px solid #333333;
   padding-block: 8px;
   color: white;
-  padding-inline: 30px;
+  padding-inline: 15px;
   font-size: 25px;
   font-weight: bold;
   backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
 
 .text {
@@ -69,12 +73,12 @@
   left: 30px;
   color: rgb(180, 180, 180);
   font-size: 13px;
-  width: 70%;
+  width: 50%;
 }
 
 .rocket {
   filter: brightness(60%);
-  animation: 2s infinite ease-in-out launch;
+  /*animation: 2s infinite ease-in-out launch;*/
 }
 
 #btn {
@@ -89,6 +93,10 @@
   color: rgb(180, 180, 180);
   background-color: transparent;
   backdrop-filter: blur(2px);
+}
+
+.title-logo {
+  width: 30px;
 }
 
 @keyframes launch {
