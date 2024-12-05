@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artemis II Visualization - Lunar Lions NASA ADC</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      body {
+        background-color: black;
+      }
+
+      .frame {
+        width: 90%;
+        margin-inline: 5%;
+        height: 90vh;
+        margin-block: 3vh;
+      }
+
+      #btn {
+        border: 2px solid #333333;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        padding-block: 5px;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        padding-inline: 10px;
+        color: rgb(180, 180, 180);
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="graph">
+      <iframe
+        src="unity-app/index.html"
+        class="frame"
+        frameborder="0"
+        allowfullscreen
+      >
+      </iframe>
+    </div>
+    <button id="btn">Enter Fullscreen</button>
+    <script>
+      const fullscreen = document.getElementById("btn");
+      fullscreen.addEventListener("click", () => {
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen();
+          fullscreen.textContent = "Exit Fullscreen";
+        } else if (document.exitFullscreen) {
+          document.exitFullscreen();
+          fullscreen.textContent = "Enter Fullscreen";
+        }
+      });
+    </script>
+  </body>
+</html>
